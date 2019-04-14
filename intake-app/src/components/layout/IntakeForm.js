@@ -1,13 +1,13 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RadioGroup, Radio } from 'react-radio-group';
-import {db} from '../../backend/Firebase'
+import { db } from '../../backend/Firebase'
 
 class IntakeForm extends Component {
 
     state = {
         agent: null,
-        date_of_file: null, 
+        date_of_file: null,
         staff_name: null,
         caller_name: null,
         caller_role: null,
@@ -20,31 +20,31 @@ class IntakeForm extends Component {
         do_not_shelter_check: false,
     }
 
-    onSubmitHandler = () =>{
+    onSubmitHandler = () => {
         db.collection('forms').doc().set({
             agent: this.state.agent,
-            date_of_file: this.state.date_of_file, 
-            staff_name: this.state.staff_name, 
-            caller_name: this.state.caller_name, 
-            youth_name: this.state.youth_name, 
-            youth_age: this.state.youth_age, 
-            youth_dob: this.state.youth_dob, 
-            caller_phone: this.state.caller_phone, 
+            date_of_file: this.state.date_of_file,
+            staff_name: this.state.staff_name,
+            caller_name: this.state.caller_name,
+            youth_name: this.state.youth_name,
+            youth_age: this.state.youth_age,
+            youth_dob: this.state.youth_dob,
+            caller_phone: this.state.caller_phone,
             youth_phone: this.state.youth_phone,
             guardian_phone: this.state.guardian_phone,
-            do_not_shelter_check: this.state.do_not_shelter_check  
+            do_not_shelter_check: this.state.do_not_shelter_check
         })
-        .then(() => {
-            //this.props.history.push('/referrals');
-        })
+            .then(() => {
+                //this.props.history.push('/referrals');
+            })
     }
 
-    render(){
+    render() {
 
-    return (
-        <div>
-            <h2 align="center">Basic Info</h2>
-            <hr/>
+        return (
+            <div>
+                <h2 align="center">Basic Info</h2>
+                <hr />
                 <div className="form-row">
                     <div className="form-group col-md-3">
                         <label htmlFor="inputStaff">Staff Name</label>
@@ -63,10 +63,10 @@ class IntakeForm extends Component {
                         <input type="text" className="form-control" id="inputYouthDob" placeholder="Youth's DOB" />
                     </div>
                 </div>
-                
+
                 <div align="center">
                     <h6>Caller's Role</h6>
-                <RadioGroup
+                    <RadioGroup
                         name="hurt_self"
                         style={{ width: 'auto' }} row>
                         <label>
@@ -83,23 +83,23 @@ class IntakeForm extends Component {
                     </label>
                     </RadioGroup>
                 </div>
-                <br/>
+                <br />
                 <h6 align="center">Phone Numbers</h6>
                 <div className="form-row">
                     <div className="form-group col-md-4">
                         <label htmlFor="callerPhone">Caller</label>
-                        <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone"/>
+                        <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone" />
                     </div>
                     <div className="form-group col-md-4">
                         <label htmlFor="youthPhone">Youth</label>
-                        <input type="text" className="form-control" id="youthPhone" placeholder="Youth's Phone"/>
+                        <input type="text" className="form-control" id="youthPhone" placeholder="Youth's Phone" />
                     </div>
                     <div className="form-group col-md-4">
                         <label htmlFor="guardianPhone">Guardian</label>
-                        <input type="text" className="form-control" id="guardianPhone" placeholder="Guardian's Phone"/>
+                        <input type="text" className="form-control" id="guardianPhone" placeholder="Guardian's Phone" />
                     </div>
                 </div>
-                <hr/>
+                <hr />
 
                 {/*Need to put Reason for Contact Here */}
 
@@ -116,7 +116,127 @@ class IntakeForm extends Component {
                             <a href="/DoNotShelter">Check List</a></label>
                 </div>
                 <br />
-                <h3 align="center"><a href="/referrals">Access Referrals</a></h3>
+                <h3 align="center">Check all that apply:</h3>
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Child Welfare Services, TAY, or Independent Living Skills Program
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck2">
+                        Mental Health Systems
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck3">
+                        Substance Abuse Services (Waterfront Recovery, other AOD resources
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Other System Agency (DHHS, Public Health, Dept. of Education, CalFresh, MediCal
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Domestic Violence
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Rape Crisis
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Law Enforcement / Juvenile Justice
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Rescue Mission / Free Mental
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Arcata House
+                    </label>
+                </div>
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        RAVEN Project  </label>
+                </div>
+
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Betty Chinn
+                    </label>
+                </div>
+
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Food For People / Food Not Bombs
+                    </label>
+                </div>
+
+
+                <div className="form-check">
+                    <input className=
+                        "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label className=
+                        "form-check-label" htmlFor="defaultCheck1">
+                        Other:  </label> <textarea row="5" col="60">
+                    </textarea>
+                </div>
+                <input type="submit" name="submit_shelter2" align="" />
+                <hr />
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
                         Why is shelter needed? Max length is 500 characters:</label>
@@ -127,12 +247,12 @@ class IntakeForm extends Component {
                         maxlength="500">
                     </textarea>
                 </div>
-                <hr/>
+                <hr />
                 <h3> Please Explain to caller: </h3>
-                <p> the youth should be aware of basic YSB rules and policies. </p>
+                <p> The youth should be aware of basic YSB rules and policies. </p>
                 <ul>
                     <li> No drug use, no violence </li>
-                    <li> outing/curfew times is caseby case, most stays are short. </li>
+                    <li> Outing/curfew times is caseby case, most stays are short. </li>
                     <li> We have 24-hour staff, provide food and basic necessities, and have Internet access. </li>
                     <li> We go on fun outings! </li>
                     <li> Make sure to mention that YSB is NOT a lock-down facilities, and that all stays are voluntary. </li>
@@ -229,7 +349,7 @@ class IntakeForm extends Component {
                     placeholder="Input here"
                     name="cws_agent_name"
                     onChange={(event) => {
-                        this.setState({...this.state, agent: event.target.value});
+                        this.setState({ ...this.state, agent: event.target.value });
                     }} />
                 <br />
                 <div className="form-group">
@@ -245,14 +365,14 @@ class IntakeForm extends Component {
                     </textarea>
                 </div>
 
-                <p> if a youth is ok with us contacting their guardian, great! If they are not it is possible that they can
+                <p> If a youth is ok with us contacting their guardian, great! If they are not it is possible that they can
                     still be sheltered, but management must be involved in the decision.Management or emergency backup should
                         also be involved if the youth has a history of violence or recent suicide attempts.</p>
                 <br />
                 <hr />
                 <br />
-                <p> check probation status. Call the appropriate number below, identify yourself as working at YSB, and ask if
-                    the youth is a ward/602. you willneed to give them the youth's full name and DOB. Youth who are wards cannot
+                <p> Check probation status. Call the appropriate number below, identify yourself as working at YSB, and ask if
+                    the youth is a ward/602. You willneed to give them the youth's full name and DOB. Youth who are wards cannot
                         be sheltered.</p>
                 <br />
                 <p>
@@ -289,7 +409,7 @@ class IntakeForm extends Component {
                         htmlFor="exampleRadios1">
                         Youth cannot be sheltered, or does not plan to seek shelter at this time.</label>
                     <label htmlFor="exampleFormControlTextarea1">
-                        reason given? Max length is 100 characters:</label>
+                        Reason given? Max length is 100 characters:</label>
                     <br />
                     <textarea className="form-control"
                         id="exampleFormControlTextarea1"
@@ -300,13 +420,34 @@ class IntakeForm extends Component {
                     </textarea>
                 </div>
 
+
+                <h1 align="center"> Request for Shelter </h1>
+                <ul className="list-group-item list-group-flush">
+                    <h4 align="center"> If their age is between 12 and 17 </h4>
+                    <li className="list-group-item"> Skip to Check "Do Not Shelter" check box</li>
+                    <h4 align="center" margin-top="10px"> If their age is between 18 and 24 </h4>
+                    <li className="list-group-item"> Inform them that we do not have same-day shelter for their age group,
+			may qualify for transitional housing programs</li>
+                    <li className="list-group-item"> Make sure to have reliable contact information and tell them someone
+			will be calling them back in the next few days with more detail about these programs.</li>
+                    <li className="list-group-item">Provide them with referals from the previous section.</li>
+                    <h4 align="center"> If the person is over the age of 24 or under 12 </h4>
+                    <li className="list-group-item">Explain we do not provide housing for their age group</li>
+                    <li className="list-group-item">Provide referals from previous section as needed.</li>
+                </ul>
+                <br/>
                 Submit request for shelter:
-            <button 
-                    name="submit_shelter2" 
+            <button
+                    name="submit_shelter2"
                     onClick={this.onSubmitHandler}>Submit
             </button>
-        </div>
-    )
+            Submit request other than shelter: 
+            <button
+                name="submit_nonshelter"
+                onClick={this.onSubmitHandler}>Submit
+            </button>
+            </div>
+        )
     }
 }
 
