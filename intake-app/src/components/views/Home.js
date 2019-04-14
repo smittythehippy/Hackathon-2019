@@ -8,7 +8,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      caller_name: ''
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -17,7 +18,7 @@ class Home extends Component {
 
   handleInputChange(event) {
     this.setState({value: event.target.value});
-
+    this.setState({caller_name: event.target.caller_name})
   }
 
   handleSubmit(event) {
@@ -36,7 +37,8 @@ class Home extends Component {
           </div>
           <div className="form-group col-md-6">
               <label>Caller's Name</label>
-              <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name"  name="caller_name" />
+              <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name"  name="caller_name" 
+              value={this.state.caller_name} onChange={this.handleInputChange}/>
           </div>
       </div>
       <div className="form-group">
