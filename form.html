@@ -10,7 +10,7 @@
 -->
 
 <head>
-    <title> Form </title>
+    <title> Form for YSB </title>
       
 </head>
 
@@ -27,8 +27,11 @@
 		<input type="radio" name="callers_role" value="cws"> Child Welfare Services<br/>
 		<input type="radio" name="callers_role" value="other"> other:
 		
-		<textarea rows="5" cols="60" maxlength="200">
+		<br/>
+		
 		if 'other' selected enter information here, otherwise leave blank, max 200 chars:
+		<br/>
+		<textarea rows="5" cols="60" maxlength="200">
 		</textarea>
 		<br/>
 		<h3> Youths Information </h3>
@@ -51,33 +54,16 @@
 		<br/>
 		<input type="checkbox" name="report" value="report"> Report child abuse or neglect
 		<br/>
-		<textarea rows="10" cols="60" maxlength="500">
 		if 'abuse' selected enter information here, otherwise leave blank, max 500 chars:
+		<br/>
+		<textarea rows="10" cols="60" maxlength="500">
 		</textarea>
 		
 		
 		</br>
-		Submit: <input type="submit" value="Submit">
+		Submit request other than shelter: <input type="submit" name="submit_nonshelter">
+		Submit request for shelter: <input type="submit" name="submit_shelter">
 		
 	</form>
-		
-
-    <hr />
-
-    <p>
-        Validate by pasting .xhtml copy's URL into<br />
-        <a href="https://html5.validator.nu/">
-            https://html5.validator.nu/
-        </a>
-    </p>
-
-    <p>
-        <a href=
-           "http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
-            <img src="http://jigsaw.w3.org/css-validator/images/vcss"
-                 alt="Valid CSS3!" height="31" width="88" />
-        </a>
-    </p>
-
 </body>
 </html>

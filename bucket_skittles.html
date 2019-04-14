@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+    by: Christopher Velazquez
+    last modified: 4/13/19
+
+    you can run this using the URL:
+	http://nrs-projects.humboldt.edu/~civ5/hackathon/bucket_skittles.html
+	This form dedicated to Kyle Smith 
+
+-->
+
+<head>
+    <title> MORE INFORMATION OF YOUTH </title>
+  
+</head>
+
+<body>
+	<h1> MORE INFORMATION OF YOUTH </h1>
+	<form method="post">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1" name="not_shelter">
+				Have you checked to make sure that this youth is not on the "DO NOT SHELTER" list?
+			</label>
+		</div>
+		<br/>
+		<div class="form-group">
+			<label for="exampleFormControlTextarea1"> 
+				Why is shelter needed? Max length is 500 characters:
+			</label>
+			<br/>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="50" maxlength="500">
+			
+			</textarea>
+		</div>
+		<h3> EXPLAIN: </h3>
+		<p> the youth should be aware of basic YSB rules and policies. </p>
+			<ul>
+				<li> No drug use, no violence </li>
+				<li> outing/curfew times is caseby case, most stays are short. </li>
+				<li> We have 24-hour staff, provide food and basic necessities, and have Internet access. </li>
+				<li> We go on fun outings! </li>
+				<li> Make sure to mention that YSB is NOT a lock-down facilities, and that all stays are voluntary. </li>
+		</p>
+		<br/>
+		<hr/>
+		<p> IF YOU ARE SPEAKING WITH A GUARDIAN OR OTHER ADULT CALLING FOR A YOUTH, YOU SHOULD NOW INFORM THEM THAT YOU NEED 
+			TO SPEAK TO THE YOUTH IN ORDER TO COMPLETE THE SCREENING PROCESS 
+		</p>
+		<div class="form-check">
+			Are you currently feeling like you want to hurt yourself?
+		  <input class="form-check-input" type="radio" name="hurt_self" id="exampleRadios1" value="option1">
+		  <label class="form-check-label" for="exampleRadios1">
+			Yes
+		  </label>
+		  
+		  <input class="form-check-input" type="radio" name="hurt_self" id="exampleRadios1" value="option2">
+		  <label class="form-check-label" for="exampleRadios1">
+			No
+		  </label>
+		</div>
+				<div class="form-check">
+			Do you ever get into fist fights or break things when upset?
+		  <input class="form-check-input" type="radio" name="fight_break" id="exampleRadios3" value="option1">
+		  <label class="form-check-label" for="exampleRadios1">
+			Yes
+		  </label>
+		  
+		  <input class="form-check-input" type="radio" name="fight_break" id="exampleRadios4" value="option2">
+		  <label class="form-check-label" for="exampleRadios1">
+			No
+		  </label>
+		</div>
+		  
+		  <br/>
+		<div class="form-group">
+			<label for="exampleFormControlTextarea1"> 
+				if yes, who do you fight? what do you break? How often? Max length is 500 characters:
+			</label>
+			<br/>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="10" cols="50" maxlength="500">
+			
+			</textarea>
+		</div>
+		  
+		  		<div class="form-check">
+			Do you have a social worker through Child Welfare Services?
+		  <input class="form-check-input" type="radio" name="cws_agent" id="exampleRadios5" value="option1">
+		  <label class="form-check-label" for="exampleRadios1">
+			Yes
+		  </label>
+		  
+		  <input class="form-check-input" type="radio" name="cws_agent" id="exampleRadios6" value="option2">
+		  <label class="form-check-label" for="exampleRadios1">
+			No
+		  </label>
+		</div>
+		
+		If yes, what is their name? <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Input here" name="cws_agent_name"/>
+		<br/>
+		<div class="form-group">
+			<label for="exampleFormControlTextarea1"> 
+				If no, are you comfortable with us contacting your parent/guardian? Why or why not? Max length is 100 characters:
+			</label>
+			<br/>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="4" cols="50" maxlength="100" name="kombat">
+			
+			</textarea>
+		</div>
+		
+		<p> if a youth is ok with us contacting their guardian, great! If they are not it is possible that they can
+			still be sheltered, but management must be involved in the decision.Management or emergency backup should
+			also be involved if the youth has a history of violence or recent suicide attempts.
+		</p>
+		
+		<br/>
+		<hr/>
+		<br/>
+		
+		<p> check probation status. Call the appropriate number below, identify yourself as working at YSB, and ask if 
+			the youth is a ward/602. you willneed to give them the youth's full name and DOB. Youth who are wards cannot 
+			be sheltered.
+		</p>
+		
+		<br/>
+			
+		<p>
+			Mon-Fri 8 am-4:30 Pm 707-445-7401
+			<br/>
+			Weekends or after 4:30 pm: 707-445-7644
+		</p>
+		
+		<br/>
+		<hr/>
+		<br/>
+		
+				  
+		<div class="form-check">
+			Once you have completed the above steps, please check one of the following:
+			<br/>
+			<input class="form-check-input" type="radio" name="youth_attends" id="exampleRadios7" value="option1">
+			<label class="form-check-label" for="exampleRadios1">
+				Youth plans to come to YSB
+			</label>
+			
+			If yes, what is the date and time? <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Date and time" name="date_time"/>
+			
+			
+		<br/>
+		<hr/>
+		<br/>
+	  
+			<input class="form-check-input" type="radio" name="youth_attends" id="exampleRadios8" value="option2">
+			<label class="form-check-label" for="exampleRadios1">
+				Youth cannot be sheltered, or does not plan to seek shelter at this time.
+			</label>
+			<label for="exampleFormControlTextarea1"> 
+				reason given? Max length is 100 characters:
+			</label>
+			<br/>
+			<textarea class="form-control" id="exampleFormControlTextarea1" rows="4" cols="50" maxlength="500" name="rsn_given">
+			
+			</textarea>
+	</div>
+		Submit request for shelter: <input type="submit" name="submit_shelter2">
+		
+	</form>
+
+</body>
+</html>
