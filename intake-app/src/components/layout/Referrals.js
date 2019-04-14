@@ -2,123 +2,123 @@ import React from 'react'
 
 export default function Referrals() {
     return (
-        <form>
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Child Welfare Services, TAY, or Independent Living Skills Program
+        <form align-items="left">
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Child Welfare Services, TAY, or Independent Living Skills Program
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck2">
-                Mental Health Systems
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck2">
+                    Mental Health Systems
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck3">
-                Substance Abuse Services (Waterfront Recovery, other AOD resources
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck3">
+                    Substance Abuse Services (Waterfront Recovery, other AOD resources
 </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Other System Agency (DHHS, Public Health, Dept. of Education, CalFresh, MediCal
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Other System Agency (DHHS, Public Health, Dept. of Education, CalFresh, MediCal
  </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Domestic Violence
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Domestic Violence
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Rape Crisis
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Rape Crisis
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Law Enforcement / Juvenile Justice
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Law Enforcement / Juvenile Justice
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Rescue Mission / Free Meal
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Rescue Mission / Free Meal
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Arcata House
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Arcata House
   </label>
-        </div>
+            </div>
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                RAVEN Project  </label>
-        </div>
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    RAVEN Project  </label>
+            </div>
 
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Betty Chinn
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Betty Chinn
   </label>
-        </div>
+            </div>
 
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Food For People / Food Not Bombs  </label>
-        </div>
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Food For People / Food Not Bombs  </label>
+            </div>
 
 
-        <div className="form-check">
-            <input className=
-                "form-check-input" type="checkbox" value="" id="defaultCheck1" />
-            <label className=
-                "form-check-label" for="defaultCheck1">
-                Other:  </label> <textarea row="5" col="60"></textarea>
-        </div>
-    </form>
+            <div className="form-check">
+                <input className=
+                    "form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                <label className=
+                    "form-check-label" htmlFor="defaultCheck1">
+                    Other:  </label> <textarea row="5" col="60"></textarea>
+            </div>
+        </form>
     );
 }

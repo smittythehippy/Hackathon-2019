@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Switch, Link, IndexRoute, hashHistory, browserHistory} from 'react-router-dom';
 import Home from './components/views/Home.js';
 import NewForm from './components/views/NewForm.js';
+import DoNotShelter from './components/views/DoNotShelter.js';
 
 //THIS is a component!
 class App extends Component {
@@ -55,16 +56,15 @@ class App extends Component {
   render() {
     console.log(this.state.forms);
     return (
-      <div className="App container">
+      <div className="App container">   
+      <Header />
         <Router>
           <div>
-            <Switch>
-              <Route path='/' component={Home} />
-              <Route path='/newform' component={NewForm} />
-            </Switch>
+              <Route exact path='/'component={Home}/>
+              <Route path='/referrals' component={NewForm}/>
+              <Route path='/DoNotShelter' component={DoNotShelter}/>
           </div>
         </Router>
-        <Referrals />
       </div>
     );
   }
