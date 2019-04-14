@@ -6,12 +6,7 @@ import { db } from '../../backend/Firebase'
 class IntakeForm extends Component {
 
     state = {
-<<<<<<< HEAD
-        agent: null,
-        date_of_file: null,
-=======
         date_of_file: null, 
->>>>>>> a5cfef61d256c8e63c791b2de3f678af0a9a4acd
         staff_name: null,
         caller_name: null,
         caller_role: null,
@@ -30,21 +25,6 @@ class IntakeForm extends Component {
         no_sheltered_reason: null
     }
 
-<<<<<<< HEAD
-    onSubmitHandler = () => {
-        db.collection('forms').doc().set({
-            agent: this.state.agent,
-            date_of_file: this.state.date_of_file,
-            staff_name: this.state.staff_name,
-            caller_name: this.state.caller_name,
-            youth_name: this.state.youth_name,
-            youth_age: this.state.youth_age,
-            youth_dob: this.state.youth_dob,
-            caller_phone: this.state.caller_phone,
-            youth_phone: this.state.youth_phone,
-            guardian_phone: this.state.guardian_phone,
-            do_not_shelter_check: this.state.do_not_shelter_check
-=======
     onSubmitHandler = () =>{
         db.collection('form').doc().set({
             date_of_file: this.state.date_of_file, 
@@ -67,7 +47,6 @@ class IntakeForm extends Component {
         })
         .then(() => {
             //this.props.history.push('/referrals');
->>>>>>> a5cfef61d256c8e63c791b2de3f678af0a9a4acd
         })
             .then(() => {
                 //this.props.history.push('/referrals');
@@ -139,17 +118,6 @@ class IntakeForm extends Component {
                 <div className="form-row">
                     <div className="form-group col-md-4">
                         <label htmlFor="callerPhone">Caller</label>
-<<<<<<< HEAD
-                        <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone" />
-                    </div>
-                    <div className="form-group col-md-4">
-                        <label htmlFor="youthPhone">Youth</label>
-                        <input type="text" className="form-control" id="youthPhone" placeholder="Youth's Phone" />
-                    </div>
-                    <div className="form-group col-md-4">
-                        <label htmlFor="guardianPhone">Guardian</label>
-                        <input type="text" className="form-control" id="guardianPhone" placeholder="Guardian's Phone" />
-=======
                         <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone"
                         onChange={(event) => {
                             this.setState({...this.state, caller_phone: event.target.value});
@@ -168,7 +136,6 @@ class IntakeForm extends Component {
                         onChange={(event) => {
                             this.setState({...this.state, guardian_phone: event.target.value});
                         }} />
->>>>>>> a5cfef61d256c8e63c791b2de3f678af0a9a4acd
                     </div>
                 </div>
                 <hr />
@@ -430,11 +397,7 @@ class IntakeForm extends Component {
                     placeholder="Input here"
                     name="cws_agent_name"
                     onChange={(event) => {
-<<<<<<< HEAD
-                        this.setState({ ...this.state, agent: event.target.value });
-=======
                         this.setState({...this.state, cws_worker_name: event.target.value});
->>>>>>> a5cfef61d256c8e63c791b2de3f678af0a9a4acd
                     }} />
                 <br />
                 <div className="form-group">
