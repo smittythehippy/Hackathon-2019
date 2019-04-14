@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import FirstForm from "../layout/FirstForm"
-import SecondForm from "../layout/SecondForm"
+import IntakeForm from "../layout/IntakeForm"
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <FirstForm />
-        <SecondForm />
+        <IntakeForm />
       </div>
     )
   }

@@ -1,12 +1,72 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import DoNotShelter from '../views/DoNotShelter';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { RadioGroup, Radio } from 'react-radio-group';
 
-function SecondForm() {
+function IntakeForm() {
     return (
         <div>
             <form method="post">
+                <div className="form-row">
+                    <div className="form-group col-md-4">
+                        <label htmlFor="inputStaff">Staff Name</label>
+                        <input type="text" className="form-control" id="inputStaff" placeholder="Staff Name" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label>Caller's Name</label>
+                        <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label>Youth's Name</label>
+                        <input type="text" className="form-control" id="inputYouth" placeholder="Youth's Name" />
+                    </div>
+                </div>
+                <div align="center">
+                Caller's Role
+                <RadioGroup
+                    name="hurt_self"
+                    style={{width:'auto'}} row>
+                    <label>
+                        <Radio value="roleYouth" />Youth
+                    </label>
+                    <label>
+                        <Radio value="roleParent" />Parent
+                    </label>
+                    <label>
+                        <Radio value="roleCws" />CWS
+                    </label>
+                    <label>
+                        <Radio value="roleOther" />Other
+                    </label>
+                        </RadioGroup>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="inputAddress">Address</label>
+                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="inputAddress2">Address 2</label>
+                    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+                </div>
+
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        <label htmlFor="inputCity">City</label>
+                        <input type="text" className="form-control" id="inputCity" />
+                    </div>
+                    <div className="form-group col-md-4">
+                        <label htmlFor="inputState">State</label>
+                        <select id="inputState" className="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div className="form-group col-md-2">
+                        <label htmlFor="inputZip">Zip</label>
+                        <input type="text" className="form-control" id="inputZip" />
+                    </div>
+                </div>
+
                 <div className="form-check">
                     <input className="form-check-input"
                         type="checkbox"
@@ -20,6 +80,7 @@ function SecondForm() {
                             <a href="/DoNotShelter">Check List</a></label>
                 </div>
                 <br />
+
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
                         Why is shelter needed? Max length is 500 characters:</label>
@@ -31,6 +92,7 @@ function SecondForm() {
 
                     </textarea>
                 </div>
+
                 <h3> EXPLAIN: </h3>
                 <p> the youth should be aware of basic YSB rules and policies. </p>
                 <ul>
@@ -44,11 +106,11 @@ function SecondForm() {
                 <hr />
                 <p> IF YOU ARE SPEAKING WITH A GUARDIAN OR OTHER ADULT CALLING FOR A YOUTH, YOU SHOULD NOW INFORM THEM THAT YOU NEED
                 TO SPEAK TO THE YOUTH IN ORDER TO COMPLETE THE SCREENING PROCESS</p>
+
                 <div className="form-check">
                     Are you currently feeling like you want to hurt yourself?
                     <br />
-
-      <input className="form-check-input"
+                    <input className="form-check-input"
                         type="radio"
                         name="hurt_self"
                         id="exampleRadios1"
@@ -56,7 +118,7 @@ function SecondForm() {
                     <label className="form-check-label"
                         htmlFor="exampleRadios1">
                         Yes</label>
-                        <br />
+                    <br />
 
                     <input className="form-check-input"
                         type="radio"
@@ -67,6 +129,7 @@ function SecondForm() {
                         htmlFor="exampleRadios1">
                         No</label>
                 </div>
+
                 <div className="form-check">
                     Do you ever get into fist fights or break things when upset?
                     <br />
@@ -79,7 +142,6 @@ function SecondForm() {
                         htmlFor="exampleRadios1">
                         Yes </label>
                     <br />
-
                     <input className="form-check-input"
                         type="radio"
                         name="fight_break"
@@ -159,11 +221,9 @@ function SecondForm() {
                 <p>
                     Mon-Fri 8 am-4:30 Pm 707-445-7401<br />
                     Weekends or after 4:30 pm: 707-445-7644</p>
-
                 <br />
                 <hr />
                 <br />
-
 
                 <div className="form-check">
                     Once you have completed the above steps, please check one of the following:
@@ -200,9 +260,9 @@ function SecondForm() {
                         cols="50"
                         maxlength="500"
                         name="rsn_given">
-
                     </textarea>
                 </div>
+
                 Submit request for shelter:
             <input type="submit"
                     name="submit_shelter2" />
@@ -211,5 +271,5 @@ function SecondForm() {
     )
 }
 
-export default SecondForm
-export { SecondForm }
+export default IntakeForm
+export { IntakeForm }

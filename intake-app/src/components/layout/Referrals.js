@@ -9,7 +9,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Child Welfare Services, TAY, or Independent Living Skills Program
-  </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -18,7 +18,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck2">
                     Mental Health Systems
-  </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -27,7 +27,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck3">
                     Substance Abuse Services (Waterfront Recovery, other AOD resources
-</label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -36,7 +36,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Other System Agency (DHHS, Public Health, Dept. of Education, CalFresh, MediCal
- </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -45,7 +45,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Domestic Violence
-  </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -54,7 +54,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Rape Crisis
-  </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -63,7 +63,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Law Enforcement / Juvenile Justice
-  </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -71,8 +71,8 @@ export default function Referrals() {
                     "form-check-input" type="checkbox" value="" id="defaultCheck1" />
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
-                    Rescue Mission / Free Meal
-  </label>
+                    Rescue Mission / Free Mental
+                    </label>
             </div>
 
             <div className="form-check">
@@ -81,7 +81,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Arcata House
-  </label>
+                    </label>
             </div>
 
             <div className="form-check">
@@ -99,7 +99,7 @@ export default function Referrals() {
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
                     Betty Chinn
-  </label>
+                    </label>
             </div>
 
 
@@ -108,7 +108,8 @@ export default function Referrals() {
                     "form-check-input" type="checkbox" value="" id="defaultCheck1" />
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
-                    Food For People / Food Not Bombs  </label>
+                    Food For People / Food Not Bombs
+                    </label>
             </div>
 
 
@@ -117,7 +118,8 @@ export default function Referrals() {
                     "form-check-input" type="checkbox" value="" id="defaultCheck1" />
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
-                    Other:  </label> <textarea row="5" col="60"></textarea>
+                    Other:  </label> <textarea row="5" col="60">
+                </textarea>
             </div>
         </form>
     );
