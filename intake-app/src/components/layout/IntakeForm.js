@@ -1,13 +1,29 @@
-import React from 'react'
+import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RadioGroup, Radio } from 'react-radio-group';
+import {db} from '../../backend/Firebase'
 
-function IntakeForm() {
+class IntakeForm extends Component {
+
+    state = {
+        agent: null
+    }
+
+    onSubmitHandler = () =>{
+        db.collection('forms').doc().set({
+            agent: this.state.agent
+        })
+        .then(() => {
+            //this.props.history.push('/referrals');
+        })
+    }
+
+    render(){
+
     return (
         <div>
             <h2 align="center">Basic Info</h2>
             <hr/>
-            <form method="post">
                 <div className="form-row">
                     <div className="form-group col-md-3">
                         <label htmlFor="inputStaff">Staff Name</label>
@@ -190,7 +206,10 @@ function IntakeForm() {
                     className="form-control"
                     id="formGroupExampleInput"
                     placeholder="Input here"
-                    name="cws_agent_name" />
+                    name="cws_agent_name"
+                    onChange={(event) => {
+                        this.setState({...this.state, agent: event.target.value});
+                    }} />
                 <br />
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
@@ -261,11 +280,13 @@ function IntakeForm() {
                 </div>
 
                 Submit request for shelter:
-            <input type="submit"
-                    name="submit_shelter2" />
-            </form>
+            <button 
+                    name="submit_shelter2" 
+                    onClick={this.onSubmitHandler}>Submit
+            </button>
         </div>
     )
+    }
 }
 
 export default IntakeForm
