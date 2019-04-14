@@ -24,9 +24,11 @@ class App extends Component {
   //render is a lifecyle method, only one that is required
   //returns JSX, an easy way to write js for output in browser
   render() {
+
     console.log(this.state.forms);
     return (
-      <div className="container">   
+      <div className="container">
+
       <Header />
         <Router>
           <div>

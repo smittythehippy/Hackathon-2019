@@ -3,26 +3,36 @@ import FirstForm from "../layout/FirstForm"
 import SecondForm from "../layout/SecondForm"
 import Referrals from '../layout/Referrals';
 
+
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      staff_name: '',
       caller_name: ''
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // const Promise = require('bluebird')
+    // const AppDAO = require('../../../src/dao')  
+    // const FormRepository = require('../../form_repository') 
+    // const dao = new AppDAO('../../database.sqlite3')
   }
 
   handleInputChange(event) {
-    this.setState({value: event.target.value});
-    this.setState({caller_name: event.target.caller_name})
+    const target = event.target;
+    if (target.name == "staff_name")
+    {
+      this.setState({staff_name: event.target.value});
+    }
+    else if (target.name == 'caller_name')
+      this.setState({caller_name : event.target.value})
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('A name was submitted: ' + this.state.staff_name + '\n caller_name: ' + this.state.caller_name);
     event.preventDefault();
   }
 
@@ -33,12 +43,13 @@ class Home extends Component {
       <div className="form-row">
           <div className="form-group col-md-6">
               <label htmlFor="inputEmail4">Staff Name</label>
-              <input type="text" className="form-control" id="inputStaff" placeholder="Staff Name" value={this.state.value} onChange={this.handleInputChange} />
+              <input type="text" className="form-control" id="inputStaff" placeholder="Staff Name" name="staff_name"
+              value={this.state.value} onChange={this.handleInputChange} />
           </div>
           <div className="form-group col-md-6">
               <label>Caller's Name</label>
               <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name"  name="caller_name" 
-              value={this.state.caller_name} onChange={this.handleInputChange}/>
+              value={this.state.value} onChange={this.handleInputChange} />
           </div>
       </div>
       <div className="form-group">
