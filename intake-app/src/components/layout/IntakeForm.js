@@ -6,7 +6,6 @@ import {db} from '../../backend/Firebase'
 class IntakeForm extends Component {
 
     state = {
-        agent: null,
         date_of_file: null, 
         staff_name: null,
         caller_name: null,
@@ -18,21 +17,33 @@ class IntakeForm extends Component {
         youth_phone: null,
         guardian_phone: null,
         do_not_shelter_check: false,
+        reason_for_shelter: null, 
+        behavior_questionaire: null, 
+        cws_worker_name: null, 
+        contact_parent_questionaire: null, 
+        appointment_time: null, 
+        no_sheltered_reason: null
     }
 
     onSubmitHandler = () =>{
-        db.collection('forms').doc().set({
-            agent: this.state.agent,
+        db.collection('form').doc().set({
             date_of_file: this.state.date_of_file, 
             staff_name: this.state.staff_name, 
-            caller_name: this.state.caller_name, 
+            caller_name: this.state.caller_name,
+            caller_role: this.state.caller_role,  
             youth_name: this.state.youth_name, 
             youth_age: this.state.youth_age, 
             youth_dob: this.state.youth_dob, 
             caller_phone: this.state.caller_phone, 
             youth_phone: this.state.youth_phone,
             guardian_phone: this.state.guardian_phone,
-            do_not_shelter_check: this.state.do_not_shelter_check  
+            do_not_shelter_check: this.state.do_not_shelter_check, 
+            reason_for_shelter : this.state.reason_for_shelter,
+            behavior_questionaire : this.state.behavior_questionaire, 
+            cws_worker_name : this.state.cws_worker_name, 
+            contact_parent_questionaire : this.state.contact_parent_questionaire, 
+            appointment_time : this.state.appointment_time, 
+            no_sheltered_reason : this.state.no_sheltered_reason
         })
         .then(() => {
             //this.props.history.push('/referrals');
@@ -48,19 +59,31 @@ class IntakeForm extends Component {
                 <div className="form-row">
                     <div className="form-group col-md-3">
                         <label htmlFor="inputStaff">Staff Name</label>
-                        <input type="text" className="form-control" id="inputStaff" placeholder="Staff Name" />
+                        <input type="text" className="form-control" id="inputStaff" placeholder="Staff Name"
+                        onChange={(event) => {
+                            this.setState({...this.state, staff_name: event.target.value});
+                        }}  />
                     </div>
                     <div className="form-group col-md-3">
                         <label>Caller's Name</label>
-                        <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name" />
+                        <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name" 
+                        onChange={(event) => {
+                            this.setState({...this.state, caller_name: event.target.value});
+                        }} />
                     </div>
                     <div className="form-group col-md-3">
                         <label>Youth's Name</label>
-                        <input type="text" className="form-control" id="inputYouth" placeholder="Youth's Name" />
+                        <input type="text" className="form-control" id="inputYouth" placeholder="Youth's Name" 
+                        onChange={(event) => {
+                            this.setState({...this.state, youth_name: event.target.value});
+                        }} />
                     </div>
                     <div className="form-group col-md-3">
                         <label>Youth's Date Of Birth</label>
-                        <input type="text" className="form-control" id="inputYouthDob" placeholder="Youth's DOB" />
+                        <input type="text" className="form-control" id="inputYouthDob" placeholder="Youth's DOB" 
+                        onChange={(event) => {
+                            this.setState({...this.state, youth_dob: event.target.value});
+                        }} />
                     </div>
                 </div>
                 
@@ -68,7 +91,11 @@ class IntakeForm extends Component {
                     <h6>Caller's Role</h6>
                 <RadioGroup
                         name="hurt_self"
-                        style={{ width: 'auto' }} row>
+                        style={{ width: 'auto' }}
+                        OnChange={(event) => {
+                            this.setState({...this.state, caller_role: event.target.value});
+                        }} 
+                         row>
                         <label>
                             <Radio value="roleYouth" />Youth
                     </label>
@@ -81,22 +108,31 @@ class IntakeForm extends Component {
                         <label>
                             <Radio value="roleOther" />Other
                     </label>
-                    </RadioGroup>
+                </RadioGroup>
                 </div>
                 <br/>
                 <h6 align="center">Phone Numbers</h6>
                 <div className="form-row">
                     <div className="form-group col-md-4">
                         <label htmlFor="callerPhone">Caller</label>
-                        <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone"/>
+                        <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone"
+                        onChange={(event) => {
+                            this.setState({...this.state, caller_phone: event.target.value});
+                        }} />
                     </div>
                     <div className="form-group col-md-4">
                         <label htmlFor="youthPhone">Youth</label>
-                        <input type="text" className="form-control" id="youthPhone" placeholder="Youth's Phone"/>
+                        <input type="text" className="form-control" id="youthPhone" placeholder="Youth's Phone"
+                        onChange={(event) => {
+                            this.setState({...this.state, youth_phone: event.target.value});
+                        }} />
                     </div>
                     <div className="form-group col-md-4">
                         <label htmlFor="guardianPhone">Guardian</label>
-                        <input type="text" className="form-control" id="guardianPhone" placeholder="Guardian's Phone"/>
+                        <input type="text" className="form-control" id="guardianPhone" placeholder="Guardian's Phone"
+                        onChange={(event) => {
+                            this.setState({...this.state, guardian_phone: event.target.value});
+                        }} />
                     </div>
                 </div>
                 <hr/>
@@ -107,7 +143,10 @@ class IntakeForm extends Component {
                     <input className="form-check-input"
                         type="checkbox"
                         value=""
-                        id="defaultCheck1" />
+                        id="defaultCheck1" 
+                        onChange={(event) => {
+                            this.setState({...this.state, do_not_shelter_check: event.target.value});
+                        }}/>
                     <label
                         className="form-check-label"
                         htmlFor="defaultCheck1"
@@ -124,7 +163,10 @@ class IntakeForm extends Component {
                     <textarea className="form-control"
                         id="exampleFormControlTextarea1"
                         rows="6" cols="50"
-                        maxlength="500">
+                        maxlength="500"
+                        onChange={(event) => {
+                            this.setState({...this.state, reason_for_shelter: event.target.value});
+                        }}>
                     </textarea>
                 </div>
                 <hr/>
@@ -195,7 +237,10 @@ class IntakeForm extends Component {
                         id="exampleFormControlTextarea1"
                         rows="10"
                         cols="50"
-                        maxlength="500">
+                        maxlength="500"
+                        onChange={(event) => {
+                            this.setState({...this.state, behavior_questionaire: event.target.value});
+                        }}>
 
                     </textarea>
                 </div>
@@ -229,7 +274,7 @@ class IntakeForm extends Component {
                     placeholder="Input here"
                     name="cws_agent_name"
                     onChange={(event) => {
-                        this.setState({...this.state, agent: event.target.value});
+                        this.setState({...this.state, cws_worker_name: event.target.value});
                     }} />
                 <br />
                 <div className="form-group">
@@ -241,7 +286,10 @@ class IntakeForm extends Component {
                         rows="4"
                         cols="50"
                         maxlength="100"
-                        name="kombat">
+                        name="kombat"
+                        onChange={(event) => {
+                            this.setState({...this.state, contact_parent_questionaire: event.target.value});
+                        }}>
                     </textarea>
                 </div>
 
@@ -277,7 +325,10 @@ class IntakeForm extends Component {
                         className="form-control"
                         id="formGroupExampleInput"
                         placeholder="Date and time"
-                        name="date_time" />
+                        name="date_time" 
+                        onChange={(event) => {
+                            this.setState({...this.state, appointment_time: event.target.value});
+                        }}/>
                     <br /><hr /> <br />
 
                     <input className="form-check-input"
@@ -296,7 +347,10 @@ class IntakeForm extends Component {
                         rows="4"
                         cols="50"
                         maxlength="500"
-                        name="rsn_given">
+                        name="rsn_given"
+                        onChange={(event) => {
+                            this.setState({...this.state, no_sheltered_reason: event.target.value});
+                        }}>
                     </textarea>
                 </div>
 
