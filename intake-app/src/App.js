@@ -17,38 +17,8 @@ import DoNotShelter from './components/views/DoNotShelter.js';
 class App extends Component {
   state = {
     forms: [
-      {
-        id: 1,
-        title: 'Name of Caller: ',
-        completed: false
-      },
-      {
-        id: 2,
-        title: 'Youths Name: ',
-        completed: false
-      },
-      {
-        id: 3,
-        title: 'Youths Age: ',
-        completed: true
-      },
+      //todo: impelement states for each property
     ]
-  }
-
-  markComplete = (id) => {
-    this.setState({
-      forms: this.state.forms.map(form => {
-        if (form.id === id) {
-          form.completed = !form.completed
-        }
-        return form;
-      })
-    });
-  }
-
-  //delete form
-  delForm = (id) => {
-    this.setState({ forms: [...this.state.forms.filter(form => form.id !== id)] });
   }
 
   //render is a lifecyle method, only one that is required
@@ -56,7 +26,7 @@ class App extends Component {
   render() {
     console.log(this.state.forms);
     return (
-      <div className="App container">   
+      <div className="container">   
       <Header />
         <Router>
           <div>

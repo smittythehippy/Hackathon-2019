@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import DoNotShelter from '../views/DoNotShelter';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SecondForm() {
     return (
@@ -45,6 +46,8 @@ function SecondForm() {
                 TO SPEAK TO THE YOUTH IN ORDER TO COMPLETE THE SCREENING PROCESS</p>
                 <div className="form-check">
                     Are you currently feeling like you want to hurt yourself?
+                    <br />
+
       <input className="form-check-input"
                         type="radio"
                         name="hurt_self"
@@ -53,6 +56,8 @@ function SecondForm() {
                     <label className="form-check-label"
                         htmlFor="exampleRadios1">
                         Yes</label>
+                        <br />
+
                     <input className="form-check-input"
                         type="radio"
                         name="hurt_self"
@@ -64,7 +69,8 @@ function SecondForm() {
                 </div>
                 <div className="form-check">
                     Do you ever get into fist fights or break things when upset?
-      <input className="form-check-input"
+                    <br />
+                    <input className="form-check-input"
                         type="radio"
                         name="fight_break"
                         id="exampleRadios3"
@@ -72,6 +78,7 @@ function SecondForm() {
                     <label className="form-check-label"
                         htmlFor="exampleRadios1">
                         Yes </label>
+                    <br />
 
                     <input className="form-check-input"
                         type="radio"
@@ -99,7 +106,8 @@ function SecondForm() {
 
                 <div className="form-check">
                     Do you have a social worker through Child Welfare Services?
-      <input className="form-check-input"
+                    <br />
+                    <input className="form-check-input"
                         type="radio"
                         name="cws_agent"
                         id="exampleRadios5"
@@ -107,7 +115,7 @@ function SecondForm() {
                     <label className="form-check-label"
                         htmlFor="exampleRadios1">
                         Yes</label>
-
+                    <br />
                     <input className="form-check-input"
                         type="radio"
                         name="cws_agent"
