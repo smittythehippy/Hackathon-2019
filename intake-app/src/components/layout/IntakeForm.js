@@ -6,12 +6,33 @@ import {db} from '../../backend/Firebase'
 class IntakeForm extends Component {
 
     state = {
-        agent: null
+        agent: null,
+        date_of_file: null, 
+        staff_name: null,
+        caller_name: null,
+        caller_role: null,
+        youth_name: null,
+        youth_age: 0,
+        youth_dob: null,
+        caller_phone: null,
+        youth_phone: null,
+        guardian_phone: null,
+        do_not_shelter_check: false,
     }
 
     onSubmitHandler = () =>{
         db.collection('forms').doc().set({
-            agent: this.state.agent
+            agent: this.state.agent,
+            date_of_file: this.state.date_of_file, 
+            staff_name: this.state.staff_name, 
+            caller_name: this.state.caller_name, 
+            youth_name: this.state.youth_name, 
+            youth_age: this.state.youth_age, 
+            youth_dob: this.state.youth_dob, 
+            caller_phone: this.state.caller_phone, 
+            youth_phone: this.state.youth_phone,
+            guardian_phone: this.state.guardian_phone,
+            do_not_shelter_check: this.state.do_not_shelter_check  
         })
         .then(() => {
             //this.props.history.push('/referrals');
