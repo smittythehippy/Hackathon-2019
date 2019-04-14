@@ -8,6 +8,9 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import Referrals from './components/layout/Referrals'
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { BrowserRouter as Router, Route, Switch, Link, IndexRoute, hashHistory, browserHistory} from 'react-router-dom';
+import Home from './components/views/Home.js';
+import NewForm from './components/views/NewForm.js';
 
 //THIS is a component!
 class App extends Component {
@@ -32,18 +35,20 @@ class App extends Component {
   }
 
   markComplete = (id) => {
-    this.setState({ forms: this.state.forms.map(form => {
-      if(form.id === id) {
-        form.completed = !form.completed
-      }
-      return form;
-    })});
-    }
+    this.setState({
+      forms: this.state.forms.map(form => {
+        if (form.id === id) {
+          form.completed = !form.completed
+        }
+        return form;
+      })
+    });
+  }
 
-    //delete form
-    delForm = (id) => {
-      this.setState({ forms: [...this.state.forms.filter(form => form.id !==id)]});
-    }
+  //delete form
+  delForm = (id) => {
+    this.setState({ forms: [...this.state.forms.filter(form => form.id !== id)] });
+  }
 
   //render is a lifecyle method, only one that is required
   //returns JSX, an easy way to write js for output in browser
@@ -51,9 +56,15 @@ class App extends Component {
     console.log(this.state.forms);
     return (
       <div className="App container">
-      <Header />
-      <FirstForm />
-      <Referrals />
+        <Router>
+          <div>
+            <Switch>
+              <Route path='/' component={Home} />
+              <Route path='/newform' component={NewForm} />
+            </Switch>
+          </div>
+        </Router>
+        <Referrals />
       </div>
     );
   }
