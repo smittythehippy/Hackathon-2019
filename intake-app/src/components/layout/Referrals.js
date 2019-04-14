@@ -3,6 +3,7 @@ import React from 'react'
 export default function Referrals() {
     return (
         <form align-items="left">
+            <h3>Check all that apply:</h3>
             <div className="form-check">
                 <input className=
                     "form-check-input" type="checkbox" value="" id="defaultCheck1" />
@@ -121,6 +122,7 @@ export default function Referrals() {
                     Other:  </label> <textarea row="5" col="60">
                 </textarea>
             </div>
+            <input type="submit" name="submit_shelter2" align=""/>
         </form>
     );
 }

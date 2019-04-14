@@ -5,67 +5,66 @@ import { RadioGroup, Radio } from 'react-radio-group';
 function IntakeForm() {
     return (
         <div>
+            <h2 align="center">Basic Info</h2>
+            <hr/>
             <form method="post">
                 <div className="form-row">
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-3">
                         <label htmlFor="inputStaff">Staff Name</label>
                         <input type="text" className="form-control" id="inputStaff" placeholder="Staff Name" />
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-3">
                         <label>Caller's Name</label>
                         <input type="text" className="form-control" id="inputCaller" placeholder="Caller's Name" />
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-3">
                         <label>Youth's Name</label>
                         <input type="text" className="form-control" id="inputYouth" placeholder="Youth's Name" />
                     </div>
+                    <div className="form-group col-md-3">
+                        <label>Youth's Date Of Birth</label>
+                        <input type="text" className="form-control" id="inputYouthDob" placeholder="Youth's DOB" />
+                    </div>
                 </div>
+                
                 <div align="center">
-                Caller's Role
+                    <h6>Caller's Role</h6>
                 <RadioGroup
-                    name="hurt_self"
-                    style={{width:'auto'}} row>
-                    <label>
-                        <Radio value="roleYouth" />Youth
+                        name="hurt_self"
+                        style={{ width: 'auto' }} row>
+                        <label>
+                            <Radio value="roleYouth" />Youth
                     </label>
-                    <label>
-                        <Radio value="roleParent" />Parent
+                        <label>
+                            <Radio value="roleParent" />Parent
                     </label>
-                    <label>
-                        <Radio value="roleCws" />CWS
+                        <label>
+                            <Radio value="roleCws" />CWS
                     </label>
-                    <label>
-                        <Radio value="roleOther" />Other
+                        <label>
+                            <Radio value="roleOther" />Other
                     </label>
-                        </RadioGroup>
+                    </RadioGroup>
                 </div>
-
-                <div className="form-group">
-                    <label htmlFor="inputAddress">Address</label>
-                    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="inputAddress2">Address 2</label>
-                    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-                </div>
-
+                <br/>
+                <h6 align="center">Phone Numbers</h6>
                 <div className="form-row">
-                    <div className="form-group col-md-6">
-                        <label htmlFor="inputCity">City</label>
-                        <input type="text" className="form-control" id="inputCity" />
+                    <div className="form-group col-md-4">
+                        <label htmlFor="callerPhone">Caller</label>
+                        <input type="text" className="form-control" id="callerPhone" placeholder="Caller's Phone"/>
                     </div>
                     <div className="form-group col-md-4">
-                        <label htmlFor="inputState">State</label>
-                        <select id="inputState" className="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                        <label htmlFor="youthPhone">Youth</label>
+                        <input type="text" className="form-control" id="youthPhone" placeholder="Youth's Phone"/>
                     </div>
-                    <div className="form-group col-md-2">
-                        <label htmlFor="inputZip">Zip</label>
-                        <input type="text" className="form-control" id="inputZip" />
+                    <div className="form-group col-md-4">
+                        <label htmlFor="guardianPhone">Guardian</label>
+                        <input type="text" className="form-control" id="guardianPhone" placeholder="Guardian's Phone"/>
                     </div>
                 </div>
+                <hr/>
+
+                {/*Need to put Reason for Contact Here */}
 
                 <div className="form-check">
                     <input className="form-check-input"
@@ -80,20 +79,19 @@ function IntakeForm() {
                             <a href="/DoNotShelter">Check List</a></label>
                 </div>
                 <br />
-
+                <h3 align="center"><a href="/referrals">Access Referrals</a></h3>
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
                         Why is shelter needed? Max length is 500 characters:</label>
                     <br />
                     <textarea className="form-control"
                         id="exampleFormControlTextarea1"
-                        rows="10" cols="50"
+                        rows="6" cols="50"
                         maxlength="500">
-
                     </textarea>
                 </div>
-
-                <h3> EXPLAIN: </h3>
+                <hr/>
+                <h3> Please Explain to caller: </h3>
                 <p> the youth should be aware of basic YSB rules and policies. </p>
                 <ul>
                     <li> No drug use, no violence </li>
@@ -102,7 +100,6 @@ function IntakeForm() {
                     <li> We go on fun outings! </li>
                     <li> Make sure to mention that YSB is NOT a lock-down facilities, and that all stays are voluntary. </li>
                 </ul>
-                <br />
                 <hr />
                 <p> IF YOU ARE SPEAKING WITH A GUARDIAN OR OTHER ADULT CALLING FOR A YOUTH, YOU SHOULD NOW INFORM THEM THAT YOU NEED
                 TO SPEAK TO THE YOUTH IN ORDER TO COMPLETE THE SCREENING PROCESS</p>
@@ -155,7 +152,7 @@ function IntakeForm() {
                 <br />
                 <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                        if yes, who do you fight? what do you break? How often? Max length is 500 characters:</label>
+                        If yes, who do you fight? What do you break? How often? Max length is 500 characters:</label>
                     <br />
                     <textarea className="form-control"
                         id="exampleFormControlTextarea1"
