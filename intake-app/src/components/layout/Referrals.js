@@ -1,9 +1,15 @@
 import React from 'react'
+import { render } from 'react-dom';
+import Modal from 'react-modal';
+import SlidingPane from 'react-sliding-pane';
+import 'react-sliding-pane/dist/react-sliding-pane.css';
 
-export default function Referrals() {
-    return (
+class Referrals extends React.Component {
+
+render(){
+     return (
         <form align-items="left">
-            <h3>Check all that apply:</h3>
+            {/* <h3>Check all that apply:</h3> */}
             <div className="form-check">
                 <input className=
                     "form-check-input" type="checkbox" value="" id="defaultCheck1" />
@@ -114,15 +120,18 @@ export default function Referrals() {
             </div>
 
 
-            <div className="form-check">
+            <div className="form-check mt-2">
                 <input className=
                     "form-check-input" type="checkbox" value="" id="defaultCheck1" />
                 <label className=
                     "form-check-label" htmlFor="defaultCheck1">
-                    Other:  </label> <textarea row="5" col="60">
+                    Other:  </label> <textarea row="5" col="120">
                 </textarea>
             </div>
-            <input type="submit" name="submit_shelter2" align=""/>
+            {/* <input type="submit" name="submit_shelter2" align=""/> */}
         </form>
     );
+  }
 }
+
+export default Referrals

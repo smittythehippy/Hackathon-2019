@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import IntakeForm from "../layout/IntakeForm"
 
+
 class Home extends Component {
+
   render() {
+
     return (
       <div>
         <IntakeForm />
@@ -11,5 +14,7 @@ class Home extends Component {
   }
 }
 
+//render(<Home />, document.getElementById('home'));
+
 export default Home;
-export {Home};
+// export {Home};

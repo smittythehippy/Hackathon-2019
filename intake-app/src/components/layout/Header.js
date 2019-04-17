@@ -1,5 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Link } from 'react-router-dom';
+import HeaderButton from './HeaderButton';
+
+
 function Header() {
     return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,7 +16,9 @@ function Header() {
                     aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-
+                <div>
+                    <HeaderButton />
+                </div>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
@@ -28,13 +33,14 @@ function Header() {
                                 Resources</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item" href="/DoNotShelter">Do Not Shelter List</a>
-                                <a className="dropdown-item" href="/referrals">Referrals</a>
                                 <div className="dropdown-divider"></div>
                                 <a className="dropdown-item" href="http://rcaa.org/youth-service-bureau">RCAA Website</a>
                             </div>
                         </li>
                     </ul>
+                    
                 </div>
+
             </nav>
     );
 }
