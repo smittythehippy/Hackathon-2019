@@ -16,7 +16,7 @@ function SecondForm() {
                         className="form-check-label"
                         htmlFor="defaultCheck1"
                         name="not_shelter">
-                        Have you checked to make sure that this youth is not on the "DO NOT SHELTER" list?
+                        Have you checked to make sure that this youth is not on the "DO NOT SHELTER" list? 
                             <a href="/DoNotShelter">Check List</a></label>
                 </div>
                 <br />
