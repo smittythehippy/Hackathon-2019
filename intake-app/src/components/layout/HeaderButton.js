@@ -22,7 +22,7 @@ class HeaderButton extends Component{
     render() {
         return (
             <div ref={ref => this.el = ref}>
-                <button onClick={() => this.setState({ isPaneOpen: true })}>Referrals</button>
+                <button className="btn btn-primary" onClick={() => this.setState({ isPaneOpen: true })}>Referrals</button>
                 <SlidingPane className='some-custom-class'
                                 overlayClassName='some-custom-overlay-class'
                                 isOpen={ this.state.isPaneOpen }

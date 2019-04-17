@@ -5,7 +5,7 @@ import HeaderButton from './HeaderButton';
 
 function Header() {
     return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="mb-2 navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="/">Home</a>
                 <button className="navbar-toggler"
                     type="button"
@@ -40,7 +40,6 @@ function Header() {
                     </ul>
                     
                 </div>
-
             </nav>
     );
 }
