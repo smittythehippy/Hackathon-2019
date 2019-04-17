@@ -2,10 +2,36 @@ import React, { Component } from 'react'
 
 class FormReasonForContact extends Component{
 
+  constructor(props){
+    super(props);
+    this.state = {
+        noteToVolunteer: '',
+        isReported: false
+    };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+}
+  handleInputChange(event){
+    const target = event.target;
+    if (target.checked == true){
+      var note = 'You must take detailed notes for report of any child abuse!';
+      var isChecked = true;
+    }
+    else{
+      var note = '';
+      var isChecked = false;
+    }
+    this.setState({  
+        noteToVolunteer: note,
+        isReported : isChecked
+    });
+  }
+
   render(){
     return(
         <div>
           <h4>Reason for contact</h4>
+          <h6>Mark all that apply</h6>
           <div classname="m-4">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
@@ -14,9 +40,11 @@ class FormReasonForContact extends Component{
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+                <input class="form-check-input" type="checkbox" value="test"
+                      id="defaultCheck2" name="isReported"
+                      checked = {this.state.isReported} onChange={this.handleInputChange}/>
                 <label class="form-check-label" for="defaultCheck2">
-                  Report of child abuse/neglect (TODO: HANDLE INTAKE OF NOTES popup to the right or enable)
+                  Report of child abuse/neglect
                 </label>
               </div>
               <div class="form-check">
@@ -40,6 +68,9 @@ class FormReasonForContact extends Component{
                       </div>
                     </div>
                       <input type="text" class="form-control" placeholder="Other"/>
+            </div>
+            <div className="mt-3">
+              <h5>{this.state.noteToVolunteer}</h5>
             </div>
         </div>
     )
