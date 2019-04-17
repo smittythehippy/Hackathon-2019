@@ -5,6 +5,7 @@ import { db } from '../../backend/Firebase'
 import FormCallerData from './FormComponents/FormCallerData';
 import FormYouthData from './FormComponents/FormYouthData';
 import FormReasonForContact from './FormComponents/FormReasonForContact';
+import FormReasonForContactNotes from './FormComponents/FormReasonForContactNotes';
 
 
 class IntakeForm extends Component {
@@ -65,8 +66,9 @@ class IntakeForm extends Component {
                 <FormCallerData />
                 <FormYouthData />              
             </div>
-            <div className="form-row">
+            <div className="form-row col-md-10 p-3 border border-primary rounded">
                 <FormReasonForContact />
+                <FormReasonForContactNotes />
             </div>
             </form>
         )

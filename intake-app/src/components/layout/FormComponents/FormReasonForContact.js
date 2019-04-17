@@ -4,8 +4,7 @@ class FormReasonForContact extends Component{
 
   render(){
     return(
-      <div className="form-row">
-        <div className="p-3 form-group border border-primary rounded">
+        <div>
           <h4>Reason for contact</h4>
           <div classname="m-4">
               <div class="form-check">
@@ -17,7 +16,7 @@ class FormReasonForContact extends Component{
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
                 <label class="form-check-label" for="defaultCheck2">
-                  Report of child abuse/neglect (TODO: HANDLE INTAKE OF NOTES popup to the right or enables a textarea)
+                  Report of child abuse/neglect (TODO: HANDLE INTAKE OF NOTES popup to the right or enable)
                 </label>
               </div>
               <div class="form-check">
@@ -42,15 +41,7 @@ class FormReasonForContact extends Component{
                     </div>
                       <input type="text" class="form-control" placeholder="Other"/>
             </div>
-            <div class="form-group mt-2">
-              <label for="exampleFormControlTextarea1">Take detailed notes!</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
         </div>
-          {/* <div className="ml-3 col-md-5 form-group border border-primary rounded" >  */}
-
-          {/* </div> */}
-      </div>
     )
   }
 }
