@@ -5,7 +5,7 @@ import HeaderButton from './HeaderButton';
 
 function Header() {
     return (
-            <nav className="mb-2 navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="mb-2 navbar navbar-expand-lg navbar-light bg-light sticky-top">
                 <a className="navbar-brand" href="/">Home</a>
                 <button className="navbar-toggler"
                     type="button"
@@ -16,9 +16,11 @@ function Header() {
                     aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+
                 <div>
                     <HeaderButton />
                 </div>
+
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
@@ -37,8 +39,7 @@ function Header() {
                                 <a className="dropdown-item" href="http://rcaa.org/youth-service-bureau">RCAA Website</a>
                             </div>
                         </li>
-                    </ul>
-                    
+                    </ul>  
                 </div>
             </nav>
     );

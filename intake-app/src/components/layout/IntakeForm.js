@@ -61,16 +61,18 @@ class IntakeForm extends Component {
     render() {
 
         return (
-            <form>
-            <div className="form-row">
-                <FormCallerData />
-                <FormYouthData />              
+            <div className="ml-5">
+                <form>
+                <div className="form-row">
+                    <FormCallerData />
+                    <FormYouthData />              
+                </div>
+                <div className="form-row col-md-10 p-3 border border-primary rounded">
+                    <FormReasonForContact />
+                    <FormReasonForContactNotes />
+                </div>
+                </form>
             </div>
-            <div className="form-row col-md-10 p-3 border border-primary rounded">
-                <FormReasonForContact />
-                <FormReasonForContactNotes />
-            </div>
-            </form>
         )
     }
 }

@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Switch, Link, IndexRoute, hashHistory, browserHistory} from 'react-router-dom';
 import Home from './components/views/Home.js';
 import DoNotShelter from './components/views/DoNotShelter.js';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 //THIS is a component!
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
   render() {
     console.log(this.state.forms);
     return (
-      <div className="container">   
+      <div>
       <Header />
         <Router>
           <div>
